@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>ConGratZ</title>
     <link rel="stylesheet" href="styleForTitle.css">
@@ -9,7 +8,6 @@
 </head>
 
 <body>
-
     <div class="navbar">
         <div class="dropdown">
             <button class="dropbtn"><a href="pagina_principala.html">Main page</a>
@@ -17,17 +15,17 @@
         </div>
         <div class="dropdown">
             <button class="dropbtn"><a href="contact_methods.html">Contact methods</a>
-            <i class="fa fa-caret-down"></i>
-          </button>
+        <i class="fa fa-caret-down"></i>
+      </button>
             <div class="dropdown-content">
-                <a href="contact_form.html">Contact form</a>
-                <a href="#">Associated media accounts</a>
+                 <a href="contact_form.html">Contact form</a>
+                 <a href="accounts.html">Associated media accounts</a>
             </div>
         </div>
         <div class="dropdown">
             <button class="dropbtn"><a href="feedback.html">Feedback</a>
-            <i class="fa fa-caret-down"></i>
-          </button>
+        <i class="fa fa-caret-down"></i>
+      </button>
             <div class="dropdown-content">
                 <a href="#">Add your own feeback</a>
                 <a href="#">Feedback from users</a>
@@ -37,8 +35,8 @@
         </div>
         <div class="dropdown">
             <button class="dropbtn"><a href="greeting_card.html">Greeting Card</a>
-            <i class="fa fa-caret-down"></i>
-          </button>
+        <i class="fa fa-caret-down"></i>
+      </button>
             <div class="dropdown-content">
                 <a href="#">Anniversary</a>
                 <a href="#">Halloween</a>
@@ -48,18 +46,18 @@
         </div>
         <div class="dropdown">
             <button class="dropbtn"><a href="bussines_card.html">Business Card</a>
-            <i class="fa fa-caret-down"></i>
-          </button>
+        <i class="fa fa-caret-down"></i>
+      </button>
             <div class="dropdown-content">
-               <a href="#">Standard</a>
+                <a href="#">Standard</a>
                 <a href="#">Premium</a>
                 <a href="#">More</a>
             </div>
         </div>
         <div class="dropdown">
             <button class="dropbtn"><a href="others.html">Others</a>
-            <i class="fa fa-caret-down"></i>
-          </button>
+        <i class="fa fa-caret-down"></i>
+      </button>
             <div class="dropdown-content">
                 <a href="#">About us</a>
                 <a href="#">Become a member</a>
@@ -67,7 +65,33 @@
             </div>
         </div>
     </div>
-    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 </body>
 
+<header>
+  <p>Contact Form </p>
+</header>
+
+<body>
+
+<div class="container">
+  <form action="/action_page.php">
+   <li> <label for="fname">First Name</label> </li>
+     <input type="text" id="fname" name="firstname" placeholder="Your name.."> 
+
+   <li> <label for="lname">Last Name</label> </li>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."> 
+
+    <li> <label for="country">Country</label> </li>
+      <select id="country" name="country">
+      <option value="romania">România</option>
+      <option value="moldova">Moldova</option>
+    </select>
+    <li> <label for="subject">Subject</label> </li>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> 
+
+     <p> <input type="submit" value="Submit" onclick="window.location.reload();"> </p>
+  </form>
+</div>
+
+</body>
 </html>
