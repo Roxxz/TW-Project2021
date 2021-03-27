@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ConGratZ</title>
-    <link rel="stylesheet" href="styleForTitle.css">
+    <link rel="stylesheet" href="pageStyles.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="buttons.css">
 </head>
@@ -12,26 +13,6 @@
         <div class="dropdown">
             <button class="dropbtn"><a href="pagina_principala.html">Main page</a>
       </button>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn"><a href="contact_methods.html">Contact methods</a>
-        <i class="fa fa-caret-down"></i>
-      </button>
-            <div class="dropdown-content">
-                 <a href="contact_form.html">Contact form</a>
-                 <a href="accounts.html">Associated media accounts</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn"><a href="feedback.html">Feedback</a>
-        <i class="fa fa-caret-down"></i>
-      </button>
-            <div class="dropdown-content">
-                <a href="#">Add your own feeback</a>
-                <a href="#">Feedback from users</a>
-                <a href="#">Feedback from other companies</a>
-                <a href="#">More</a>
-            </div>
         </div>
         <div class="dropdown">
             <button class="dropbtn"><a href="greeting_card.html">Greeting Card</a>
@@ -55,12 +36,32 @@
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn"><a href="others.html">Others</a>
+            <button class="dropbtn"><a href="feedback.html">Feedback</a>
         <i class="fa fa-caret-down"></i>
       </button>
             <div class="dropdown-content">
-                <a href="#">About us</a>
-                <a href="#">Become a member</a>
+                <a href="#">Add your own feeback</a>
+                <a href="#">Feedback from users</a>
+                <a href="#">Feedback from other companies</a>
+                <a href="#">More</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="contact_methods.html">Contact us!</a>
+        <i class="fa fa-caret-down"></i>
+      </button>
+            <div class="dropdown-content">
+                <a href="contact_form.html">Contact form</a>
+                <a href="accounts.html">Associated media accounts</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a>Others</a>
+        <i class="fa fa-caret-down"></i>
+      </button>
+            <div class="dropdown-content">
+                <a href="about.html">About us</a>
+                <a href="member.html">Become a member</a>
                 <a href="#">Donate</a>
             </div>
         </div>
@@ -68,30 +69,31 @@
 </body>
 
 <header>
-  <p>Contact Form </p>
+    <p>Contact Form </p>
 </header>
 
 <body>
 
-<div class="container">
-  <form action="/action_page.php">
-   <li> <label for="fname">First Name</label> </li>
-     <input type="text" id="fname" name="firstname" placeholder="Your name.."> 
+    <div class="container">
+        <form action="/action_page.php">
+            <li> <label for="fname">First Name</label> </li>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-   <li> <label for="lname">Last Name</label> </li>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.."> 
+            <li> <label for="lname">Last Name</label> </li>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <li> <label for="country">Country</label> </li>
-      <select id="country" name="country">
+            <li> <label for="country">Country</label> </li>
+            <select id="country" name="country">
       <option value="romania">România</option>
       <option value="moldova">Moldova</option>
     </select>
-    <li> <label for="subject">Subject</label> </li>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> 
+            <li> <label for="subject">Subject</label> </li>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-     <p> <input type="submit" value="Submit" onclick="window.location.reload();"> </p>
-  </form>
-</div>
+            <p> <input type="submit" value="Submit" onclick="window.location.reload();"> </p>
+        </form>
+    </div>
 
 </body>
+
 </html>
