@@ -4,9 +4,9 @@ body{
 	color: black;
 	text-align: center;
 	vertical-align:center;
-	margin: auto;
 }
 h1{
 	text-align: center;
 	margin-top: 60px;
+	margin-left: 20px;
 }
