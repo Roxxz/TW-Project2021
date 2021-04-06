@@ -1,18 +1,6 @@
 body {
     background-image: url('b.jpg');
     background-size: cover;
-    overflow-y: scroll;
-}
-
-.textbox::-webkit-scrollbar {
-    display: none;
-}
-
-.textbox {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }
 
 h1 {
