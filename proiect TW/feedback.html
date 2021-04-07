@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ConGratZ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="pageStyles.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="buttons.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <form style="display: inline" action="signIn.html" method="get">
+                <button class="dropbtn">Sign in</button>
+              </form>
+        </div>
+        <div class="dropdown">
+            <form style="display: inline" action="pagina_principala.html" method="get">
+                <button class="dropbtn">Main page</button>
+              </form>
+        </div>
+        <div class="dropdown">
+            <form style="display: inline" action="greeting_card.html" method="get">
+                <button class="dropbtn">Greeting Card</button>
+             </form>
+              <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="anniversaryCard.html">Anniversary</a>
+                <a href="halloweenCard.html">Halloween</a>
+                <a href="christmasCard.html">Christmas</a>
+                <a href="moreCards.html">More</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <form style="display: inline" action="bussines_card.html" method="get">
+                <button class="dropbtn">Business Card </button></form>
+              <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="standardBC.html">Standard</a>
+                <a href="premiumBC.html">Premium</a>
+                <a href="moreBC.html">More</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <form style="display: inline" action="feedback.html" method="get">
+                <button class="dropbtn">Feedback</button>
+              </form>
+              <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="feedbackForm.html">Add your own feeback</a>
+                <a href="feedbackUsers.html">Feedback from users</a>
+                <a href="feedbackCompanies.html">Feedback from other companies</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <form style="display: inline" action="contact_methods.html" method="get">
+                <button class="dropbtn">Contact us!  </button>
+              </form>
+              <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="contact_form.html">Contact form</a>
+                <a href="accounts.html">Associated media accounts</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <form style="display: inline" action="others.html" method="get">
+                <button class="dropbtn">Others</button>
+              </form>
+              <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="about.html">About us</a>
+                <a href="member.html">Become a member</a>
+                <a href="donate.html">Donate</a>
+            </div>
+        </div>
+
+        <div>
+            <img src="logo.png" alt="">
+        </div>
+    </div>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <h1>Choose what you want to do: </h1>
+    <div>
+        <ul>
+            <li id="left-container"><a href="feedbackForm.html">Add your feedback</a></li>
+            <li id="right-container"><a href="feedbackUsers.html">See feedbacks</a></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
