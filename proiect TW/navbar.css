@@ -1,13 +1,20 @@
-#mySearch {
+input {
     width: 100%;
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid #ddd;
+    font-size: 20px;
+    color: lightslategrey;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
 }
 
 .navbar {
     background-color: rgb(20, 22, 32);
     overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .navbar a {
@@ -17,6 +24,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .navbar a:hover {
@@ -24,7 +32,7 @@
     color: black;
 }
 
-.navbar a.active {
+.active {
     background-color: #7c8ccf;
     color: white;
 }
@@ -35,14 +43,14 @@
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;
+    font-size: 20px;
+    align-self: center;
     border: none;
-    outline: none;
     color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
+    margin-top: 13px;
 }
 
 .navbar a:hover,
@@ -55,7 +63,7 @@
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -76,10 +84,6 @@
     display: block;
 }
 
-
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-    }
+.acc {
+    float: right;
 }

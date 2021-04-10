@@ -1,12 +1,13 @@
-body{
-	background-image: url('b.jpg');
-	background-size: cover;
-	color: black;
-	text-align: center;
-	vertical-align:center;
+body {
+    background-image: url('b.jpg');
+    background-size: cover;
+    color: black;
+    text-align: center;
+    vertical-align: central;
 }
-h1{
-	text-align: center;
-	margin-top: 60px;
-	margin-left: 20px;
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 20px;
 }

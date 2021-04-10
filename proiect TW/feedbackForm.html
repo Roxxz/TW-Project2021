@@ -15,20 +15,15 @@
 <body>
     <div class="navbar">
         <div class="dropdown">
-            <form style="display: inline" action="signIn.html" method="get">
-                <button class="dropbtn">Sign in</button>
-              </form>
-        </div>
-        <div class="dropdown">
             <form style="display: inline" action="pagina_principala.html" method="get">
                 <button class="dropbtn">Main page</button>
-              </form>
+            </form>
         </div>
         <div class="dropdown">
             <form style="display: inline" action="greeting_card.html" method="get">
                 <button class="dropbtn">Greeting Card</button>
-             </form>
-              <i class="fa fa-caret-down"></i>
+            </form>
+            <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
                 <a href="anniversaryCard.html">Anniversary</a>
                 <a href="halloweenCard.html">Halloween</a>
@@ -40,7 +35,7 @@
         <div class="dropdown">
             <form style="display: inline" action="bussines_card.html" method="get">
                 <button class="dropbtn">Business Card </button></form>
-              <i class="fa fa-caret-down"></i>
+            <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
                 <a href="standardBC.html">Standard</a>
                 <a href="premiumBC.html">Premium</a>
@@ -51,8 +46,8 @@
         <div class="dropdown">
             <form style="display: inline" action="feedback.html" method="get">
                 <button class="dropbtn">Feedback</button>
-              </form>
-              <i class="fa fa-caret-down"></i>
+            </form>
+            <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
                 <a href="feedbackForm.html">Add your own feeback</a>
                 <a href="feedbackUsers.html">Feedback from users</a>
@@ -61,10 +56,10 @@
         </div>
 
         <div class="dropdown">
-            <form style="display: inline" action="contact_methods.html" method="get">
+            <form style="display: inline" action="#" method="get">
                 <button class="dropbtn">Contact us!  </button>
-              </form>
-              <i class="fa fa-caret-down"></i>
+            </form>
+            <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
                 <a href="contact_form.html">Contact form</a>
                 <a href="accounts.html">Associated media accounts</a>
@@ -72,10 +67,10 @@
         </div>
 
         <div class="dropdown">
-            <form style="display: inline" action="others.html" method="get">
+            <form style="display: inline" action="#" method="get">
                 <button class="dropbtn">Others</button>
-              </form>
-              <i class="fa fa-caret-down"></i>
+            </form>
+            <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
                 <a href="about.html">About us</a>
                 <a href="member.html">Become a member</a>
@@ -83,7 +78,12 @@
             </div>
         </div>
 
-        <div>
+        <div class="acc">
+            <div class="dropdown">
+                <form style="display: inline" action="pagina_principala.html" method="get">
+                    <button class="dropbtn">My account</button>
+                </form>
+            </div>
             <img src="logo.png" alt="">
         </div>
     </div>
@@ -95,27 +95,35 @@
             <td>
                 <div class="container">
                     <form action="/action_page.php">
-                     
-                            <ul> <li><label for="fname">First Name</label></li> </ul>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                            <p></p>
-                            <ul> <li><label for="lname">Last Name </label></li> </ul>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                            <p></p>
-                            <select id="wherefrom" name="wherefrom">
+
+                        <ul>
+                            <li><label for="fname">First Name</label></li>
+                        </ul>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <p></p>
+                        <ul>
+                            <li><label for="lname">Last Name </label></li>
+                        </ul>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <p></p>
+                        <select id="wherefrom" name="wherefrom">
                                 <option value="company">Company</option>
                                 <option value="user">User</option>
                             </select>
-                            <ul> <li><label for="country">Country</label> </li></ul>
-                            <select id="country" name="country">
+                        <ul>
+                            <li><label for="country">Country</label> </li>
+                        </ul>
+                        <select id="country" name="country">
                                 <option value="romania">România</option>
                                 <option value="moldova">Moldova</option>
                             </select>
-                            <ul><li> <label for="subject">Subject</label> </li></ul>
-                            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-                            <p> <input type="submit" value="Submit" onclick="window.location.reload();"> </p>
+                        <ul>
+                            <li> <label for="subject">Subject</label> </li>
+                        </ul>
+                        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                        <p> <input type="submit" value="Submit" onclick="window.location.reload();"> </p>
 
-                       
+
                     </form>
                 </div>
             </td>
@@ -124,7 +132,7 @@
                     <img class="logoPic" src="logo.png" alt="logo">
                 </div>
             </td>
-   
+
         </tr>
     </table>
 </body>

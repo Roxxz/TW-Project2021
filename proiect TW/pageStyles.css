@@ -1,12 +1,12 @@
 body {
     background-image: url('b.jpg');
-	background-size: cover;
+    background-size: cover;
 }
 
 h1 {
     color: navy;
     margin-left: 20px;
-    text-align:center;
+    text-align: center;
 }
 
 img {
