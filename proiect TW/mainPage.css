@@ -1,0 +1,55 @@
+.welcome {
+    position: absolute;
+    margin: 0 0 0 500px;
+    width: 500px;
+    height: 500px;
+}
+
+.new1 {
+    position: absolute;
+    margin: 500px 0 0 0;
+}
+
+.new2 {
+    position: absolute;
+    margin: 200px 0 0 0;
+}
+
+.businessButton {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: 0 0 0 300px;
+}
+
+.first {
+    margin: 570px 0 0 30px;
+}
+
+.second {
+    margin: 270px 0 0 30px;
+}
+
+p {
+    margin: 0 0 0 30px;
+    text-align: left;
+    text-indent: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 160%;
+    color: darkslateblue;
+    background-color: rgb(255, 250, 252);
+}
+
+.halloweenCard {
+    position: absolute;
+    margin: 50px 0 0 500px;
+    width: 200px;
+    height: 300px;
+}
+
+.moreButton {
+    position: absolute;
+    margin: 0 0 0 800px;
+    width: 400px;
+    height: 400px;
+}
