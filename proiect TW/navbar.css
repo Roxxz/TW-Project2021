@@ -87,3 +87,10 @@ input {
 .acc {
     float: right;
 }
+
+img {
+    float: right;
+    width: 130px;
+    height: 80px;
+    margin-right: 3px;
+}
