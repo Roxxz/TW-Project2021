@@ -24,52 +24,52 @@ $stmt->close();
 <head>
     <title>ConGratZ</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../pageStyles.css">
-    <link rel="stylesheet" href="../scroll.css">
-    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../css/pageStyles.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="myAccount.css">
 </head>
 
 <body class="loggedin">
 <div class="navbar">
     <div class="dropdown">
-        <form style="display: inline" action="../../html/pagina_principala.html" method="get">
+        <form style="display: inline" action="../html/pagina_principala.html" method="get">
             <button class="dropbtn">Main page</button>
         </form>
     </div>
     <div class="dropdown">
-        <form style="display: inline" action="../../html/greeting_card.html" method="get">
+        <form style="display: inline" action="../html/greeting_card.html" method="get">
             <button class="dropbtn">Greeting Card</button>
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../../html/anniversaryCard.html">Anniversary</a>
-            <a href="../../html/halloweenCard.html">Halloween</a>
-            <a href="../../html/christmasCard.html">Christmas</a>
-            <a href="../../html/moreCards.html">More</a>
+            <a href="../html/anniversaryCard.html">Anniversary</a>
+            <a href="../html/halloweenCard.html">Halloween</a>
+            <a href="../html/christmasCard.html">Christmas</a>
+            <a href="../html/moreCards.html">More</a>
         </div>
     </div>
 
     <div class="dropdown">
-        <form style="display: inline" action="../../html/bussines_card.html" method="get">
+        <form style="display: inline" action="../html/bussines_card.html" method="get">
             <button class="dropbtn">Business Card </button></form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../../html/standardBC.html">Standard</a>
-            <a href="../../html/premiumBC.html">Premium</a>
-            <a href="../../html/moreBC.html">More</a>
+            <a href="../html/standardBC.html">Standard</a>
+            <a href="../html/premiumBC.html">Premium</a>
+            <a href="../html/moreBC.html">More</a>
         </div>
     </div>
 
     <div class="dropdown">
-        <form style="display: inline" action="../../html/feedback.html" method="get">
+        <form style="display: inline" action="../html/feedback.html" method="get">
             <button class="dropbtn">Feedback</button>
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../../html/feedbackForm.html">Add your own feeback</a>
-            <a href="../../html/feedbackUsers.html">Feedback from users</a>
-            <a href="../../html/feedbackCompanies.html">Feedback from other companies</a>
+            <a href="../html/feedbackForm.html">Add your own feeback</a>
+            <a href="../html/feedbackUsers.html">Feedback from users</a>
+            <a href="../html/feedbackCompanies.html">Feedback from other companies</a>
         </div>
     </div>
 
@@ -79,8 +79,8 @@ $stmt->close();
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../../html/contact_form.html">Contact form</a>
-            <a href="../../html/accounts.html">Associated media accounts</a>
+            <a href="../html/contact_form.html">Contact form</a>
+            <a href="../html/accounts.html">Associated media accounts</a>
         </div>
     </div>
 
@@ -90,9 +90,9 @@ $stmt->close();
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../../html/about.html">About us</a>
-            <a href="../../html/member.html">Become a member</a>
-            <a href="../../html/donate.html">Donate</a>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/member.html">Become a member</a>
+            <a href="../html/donate.html">Donate</a>
         </div>
     </div>
 
@@ -102,7 +102,7 @@ $stmt->close();
                 <button class="dropbtn">My account</button>
             </form>
         </div>
-        <img src="../../assets/logo.png" alt="">
+        <img src="../assets/logo.png" alt="">
     </div>
 </div>
 
