@@ -1,0 +1,10 @@
+body {
+    background-image: url('../assets/b.jpg');
+    background-size: cover;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+    text-align: center;
+}
