@@ -4,17 +4,16 @@
 <head>
     <title>ConGratZ</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/pageStyles.css">
+    <link rel="stylesheet" href="../css/page_styles.css">
+    <link rel="stylesheet" href="../css/scroll.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/buttons.css">
-    <link rel="stylesheet" href="../css/business.css">
 </head>
 
 <body>
-
     <div class="navbar">
         <div class="dropdown">
-            <form style="display: inline" action="pagina_principala.html" method="get">
+            <form style="display: inline" action="main_page.html" method="get">
                 <button class="dropbtn">Main page</button>
             </form>
         </div>
@@ -24,21 +23,21 @@
             </form>
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="anniversaryCard.html">Anniversary</a>
-                <a href="halloweenCard.html">Halloween</a>
-                <a href="christmasCard.html">Christmas</a>
-                <a href="moreCards.html">More</a>
+                <a href="anniversary_card.html">Anniversary</a>
+                <a href="halloween_card.html">Halloween</a>
+                <a href="christmas_card.html">Christmas</a>
+                <a href="more_cards.html">More</a>
             </div>
         </div>
 
         <div class="dropdown">
-            <form style="display: inline" action="bussines_card.html" method="get">
+            <form style="display: inline" action="business_card.html" method="get">
                 <button class="dropbtn">Business Card </button></form>
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="standardBC.html">Standard</a>
-                <a href="premiumBC.html">Premium</a>
-                <a href="moreBC.html">More</a>
+                <a href="standard_business_card.html">Standard</a>
+                <a href="premium_business_card.html">Premium</a>
+                <a href="more_business_card.html">More</a>
             </div>
         </div>
 
@@ -48,9 +47,9 @@
             </form>
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="feedbackForm.html">Add your own feeback</a>
-                <a href="feedbackUsers.html">Feedback from users</a>
-                <a href="feedbackCompanies.html">Feedback from other companies</a>
+                <a href="feedback_form.html">Add your own feeback</a>
+                <a href="feedback_users.html">Feedback from users</a>
+                <a href="feedback_companies.html">Feedback from other companies</a>
             </div>
         </div>
 
@@ -79,7 +78,7 @@
 
         <div class="acc">
             <div class="dropdown">
-                <form style="display: inline" action="pagina_principala.html" method="get">
+                <form style="display: inline" action="main_page.html" method="get">
                     <button class="dropbtn">My account</button>
                 </form>
             </div>
@@ -87,32 +86,7 @@
         </div>
     </div>
 
-    <div class="grid-container">
-        <div class="card">
-            <img src="../business%20card/S1.png" alt="Standard Bussiness Card 1">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../business%20card/S2.png" alt="Standard Bussiness Card 2">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../business%20card/S3.png" alt="Standard Bussiness Card 3">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../business%20card/S4.png" alt="Standard Bussiness Card 4">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../business%20card/S5.png" alt="Standard Bussiness Card 5">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../business%20card/S6.png" alt="Standard Bussiness Card 6">
-            <p><button>Try it out</button></p>
-        </div>
-    </div>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 </body>
 
 </html>

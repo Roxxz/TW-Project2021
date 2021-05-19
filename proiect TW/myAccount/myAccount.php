@@ -14,7 +14,7 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
     <title>ConGratZ</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/pageStyles.css">
+    <link rel="stylesheet" href="../css/page_styles.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="myAccount.css">
@@ -23,7 +23,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body class="loggedin">
     <div class="navbar">
         <div class="dropdown">
-            <form style="display: inline" action="../html/pagina_principala.html" method="get">
+            <form style="display: inline" action="../html/main_page.html" method="get">
                 <button class="dropbtn">Main page</button>
             </form>
         </div>
@@ -33,21 +33,21 @@ if (!isset($_SESSION['loggedin'])) {
             </form>
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="../html/anniversaryCard.html">Anniversary</a>
-                <a href="../html/halloweenCard.html">Halloween</a>
-                <a href="../html/christmasCard.html">Christmas</a>
-                <a href="../html/moreCards.html">More</a>
+                <a href="../html/anniversary_card.html">Anniversary</a>
+                <a href="../html/halloween_card.html">Halloween</a>
+                <a href="../html/christmas_card.html">Christmas</a>
+                <a href="../html/more_cards.html">More</a>
             </div>
         </div>
 
         <div class="dropdown">
-            <form style="display: inline" action="../html/bussines_card.html" method="get">
+            <form style="display: inline" action="../html/business_card.html" method="get">
                 <button class="dropbtn">Business Card </button></form>
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="../html/standardBC.html">Standard</a>
-                <a href="../html/premiumBC.html">Premium</a>
-                <a href="../html/moreBC.html">More</a>
+                <a href="../html/standard_business_card.html">Standard</a>
+                <a href="../html/premium_business_card.html">Premium</a>
+                <a href="../html/more_business_card.html">More</a>
             </div>
         </div>
 
@@ -57,9 +57,9 @@ if (!isset($_SESSION['loggedin'])) {
             </form>
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="../html/feedbackForm.html">Add your own feeback</a>
-                <a href="../html/feedbackUsers.html">Feedback from users</a>
-                <a href="../html/feedbackCompanies.html">Feedback from other companies</a>
+                <a href="../html/feedback_form.html">Add your own feeback</a>
+                <a href="../html/feedback_users.html">Feedback from users</a>
+                <a href="../html/feedback_companies.html">Feedback from other companies</a>
             </div>
         </div>
 
