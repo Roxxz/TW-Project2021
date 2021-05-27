@@ -106,8 +106,6 @@ $stmt->close();
     </div>
 </div>
 
-<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-
 <nav class="navtop">
     <div>
         <a href="profile.php">Profile</a>

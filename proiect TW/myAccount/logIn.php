@@ -91,8 +91,6 @@ session_start();
     </div>
 </div>
 
-<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-
 <div class="login">
     <h1>Login</h1>
     <form action="authenticate.php" method="post">
