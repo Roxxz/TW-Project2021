@@ -1,7 +1,8 @@
 <?php
 session_start();
+include "../myAccount/database.php";
+$con = BD::get_con();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +12,13 @@ session_start();
     <link rel="stylesheet" href="../css/page_styles.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="myAccount.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="feedback_text_box.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 
-<body class="loggedin">
+<body>
+
 <div class="navbar">
     <div class="dropdown">
         <form style="display: inline" action="../html/main_page.html" method="get">
@@ -37,7 +40,8 @@ session_start();
 
     <div class="dropdown">
         <form style="display: inline" action="../html/business_card.html" method="get">
-            <button class="dropbtn">Business Card </button></form>
+            <button class="dropbtn">Business Card</button>
+        </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
             <a href="../html/standard_business_card.html">Standard</a>
@@ -52,15 +56,15 @@ session_start();
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../feedback/feedback_form.php" method="get">Add your own feeback</a>
-            <a href="../feedback/feedback_users.php" method="get">Feedback from users</a>
+            <a href="../html/feedback_form.html">Add your own feeback</a>
+            <a href="../feedback/feedback_users.php">Feedback from users</a>
             <a href="../feedback/feedback_companies.php" method="get">Feedback from other companies</a>
         </div>
     </div>
 
     <div class="dropdown">
         <form style="display: inline" action="#" method="get">
-            <button class="dropbtn">Contact us!  </button>
+            <button class="dropbtn">Contact us!</button>
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
@@ -83,7 +87,7 @@ session_start();
 
     <div class="acc">
         <div class="dropdown">
-            <form style="display: inline" action="myAccount.php" method="get">
+            <form style="display: inline" action="../myAccount/myAccount.php" method="get">
                 <button class="dropbtn">My account</button>
             </form>
         </div>
@@ -91,27 +95,27 @@ session_start();
     </div>
 </div>
 
-<div class="login">
-    <h1>Login</h1>
-    <form action="authenticate.php" method="post">
-        <label for="username"><i class="fas fa-user-circle"></i></label>
-        <input type="text" name="username" placeholder="Username" id="username" required>
+<?php $result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='utilizator'");
+$row = mysqli_fetch_array($result); ?>
 
-        <label for="password"><i class="fas fa-lock"></i></label>
-        <input type="password" name="password" placeholder="Password" id="password" required>
-        <input type="submit" value="Submit">
-    </form>
-
+<div class="feedbackTextBox">
+    <?php
+    echo "First Name:  " . $row['nume'] . "<br />".
+        "Last Name:  " . $row['prenume'] . " " ."<br />".
+        "Country: " . $row['tara'] . " " ."<br />".
+        "Message: ". $row['mesaj'] . " " ."<br />".
+        $row['tipPersoana'] . "<br />";;
+    while ($row = mysqli_fetch_array($result)) {
+        echo "First Name:  " . $row['nume'] ."<br />".
+            "Last Name:  " . $row['prenume'] ."<br />".
+            "Country: " . $row['tara'] . "<br />".
+            "Message: ". $row['mesaj'] ."<br />".
+            $row['tipPersoana'] . "<br />";
+    } ?>
 </div>
 
-        <?php
-        if(isset($_SESSION["registered"]))
-        {
-            echo "<p align=center>You have successfully registered, now you can login!</p>";
-        }
-        ?>
-<p class="det">Not a member? <a href="signUp.html">Sign Up</a> </p>
 
+<? phpmysqli_close($con); ?>
 </body>
 
 </html>

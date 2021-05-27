@@ -67,9 +67,9 @@ $stmt->close();
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../html/feedback_form.html">Add your own feeback</a>
-            <a href="../html/feedback_users.html">Feedback from users</a>
-            <a href="../html/feedback_companies.html">Feedback from other companies</a>
+            <a href="../feedback/feedback_form.php" method="get">Add your own feeback</a>
+            <a href="../feedback/feedback_users.php" method="get">Feedback from users</a>
+            <a href="../feedback/feedback_companies.php" method="get">Feedback from other companies</a>
         </div>
     </div>
 
