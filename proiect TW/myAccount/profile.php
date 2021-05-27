@@ -27,6 +27,7 @@ $stmt->close();
     <link rel="stylesheet" href="../css/scroll.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="myAccount.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 
 <body class="loggedin">
