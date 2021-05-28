@@ -20,7 +20,7 @@ $con = BD::get_con();
 <body>
 
 <?php include("../menu/menu_bar.html");
-$result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='utilizator'");
+$result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='user'");
 $row = mysqli_fetch_array($result); ?>
 
 <div class="feedbackTextBox">
