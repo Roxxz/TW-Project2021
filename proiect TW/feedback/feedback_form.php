@@ -3,7 +3,6 @@ session_start();
 include "../myAccount/database.php";
 $con = BD::get_con();
 
-
 if ($stmt = $con->prepare('INSERT INTO feedback (id, nume, prenume, tara, mesaj, tipPersoana) VALUES (?, ?, ?, ?, ?, ? ) ')) {
 
     $NULL = NULL;
