@@ -64,7 +64,7 @@ session_start();
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../html/contact_form.html">Contact form</a>
+            <a href="../contact/contact_form.html">Contact form</a>
             <a href="../html/accounts.html">Associated media accounts</a>
         </div>
     </div>
