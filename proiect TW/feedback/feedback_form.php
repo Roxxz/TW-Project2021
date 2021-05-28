@@ -10,7 +10,7 @@ if ($stmt = $con->prepare('INSERT INTO feedback (id, nume, prenume, tara, mesaj,
     $stmt->execute();
     $stmt->store_result();
     $stmt->close();
-    header('Location: feedback_form.html');
+    header('Location: form.php');
 
 } else {
     throw new Exception('Error in statement: ' . $con->error);

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ConGratZ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/page_styles.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../menu/menu_bar.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+
+<body>
+
+<?php include("../menu/menu_bar.html"); ?>
+
+    <h1>Choose between diferent types of cards or make your own from scratch: </h1>
+    <div>
+        <ul>
+            <li id="left-container"><a href="browse.php">Browse</a></li>
+            <li id="right-container"><a href="make_greeting_card.php">Make your own</a></li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

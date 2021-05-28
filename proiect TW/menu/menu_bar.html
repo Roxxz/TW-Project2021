@@ -1,91 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>ConGratZ</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/page_styles.css">
-    <link rel="stylesheet" href="../css/scroll.css">
-    <link rel="stylesheet" href="../css/about_style.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/buttons.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-</head>
-
-<body>
-<div class="navbar">
-    <div class="dropdown">
-        <form style="display: inline" action="main_page.html" method="get">
-            <button class="dropbtn">Main page</button>
-        </form>
-    </div>
-    <div class="dropdown">
-        <form style="display: inline" action="greeting_card.html" method="get">
-            <button class="dropbtn">Greeting Card</button>
-        </form>
-        <i class="fa fa-caret-down"></i>
-        <div class="dropdown-content">
-            <a href="anniversary_card.html">Anniversary</a>
-            <a href="halloween_card.html">Halloween</a>
-            <a href="christmas_card.html">Christmas</a>
-            <a href="more_cards.html">More</a>
+<nav>
+    <form style="display: inline" action="../html/main_page.php" method="get">
+        <button class="main">Main page</button> </form>
+    <div class="dropdown-menu">
+        <form style="display: inline" action="../html/greeting_card.php" method="get">
+            <button class="menu-btn">Greeting Card</button> </form>
+        <div class="menu-content">
+            <a class="links-hidden" href="../html/anniversary_card.php">Anniversary</a>
+            <a class="links-hidden" href="../html/halloween_card.php">Halloween</a>
+            <a class="links-hidden" href="../html/christmas_card.php">Christmas</a>
+            <a class="links-hidden" href="../html/more_cards.php">More</a>
         </div>
     </div>
-
-    <div class="dropdown">
-        <form style="display: inline" action="business_card.html" method="get">
-            <button class="dropbtn">Business Card </button></form>
-        <i class="fa fa-caret-down"></i>
-        <div class="dropdown-content">
-            <a href="standard_business_card.html">Standard</a>
-            <a href="premium_business_card.html">Premium</a>
-            <a href="more_business_card.html">More</a>
+    <div class="dropdown-menu">
+        <form style="display: inline" action="../html/business_card.php" method="get">
+            <button class="menu-btn">Business Card</button> </form>
+        <div class="menu-content">
+            <a class="links-hidden" href="../html/standard_business_card.php">Standard</a>
+            <a class="links-hidden" href="../html/premium_business_card.php">Premium</a>
+            <a class="links-hidden" href="../html/more_business_card.php">More</a>
         </div>
     </div>
-
-    <div class="dropdown">
-        <form style="display: inline" action="feedback.html" method="get">
-            <button class="dropbtn">Feedback</button>
-        </form>
-        <i class="fa fa-caret-down"></i>
-        <div class="dropdown-content">
-            <a href="../feedback/feedback_form.html">Add your own feedback</a>
-            <a href="../feedback/feedback_users.php" method="get">Feedback from users</a>
-            <a href="../feedback/feedback_companies.php"  method="get">Feedback from other companies</a>
+    <div class="dropdown-menu">
+        <form style="display: inline" action="../html/feedback.php" method="get">
+            <button class="menu-btn">Feedback</button> </form>
+        <div class="menu-content">
+            <a class="links-hidden" href="../feedback/feedback_form.php" >Add your own feedback</a>
+            <a class="links-hidden" href="../feedback/feedback_users.php">Feedback from users</a>
+            <a class="links-hidden" href="../feedback/feedback_companies.php">Feedback from companies</a>
         </div>
     </div>
-
-    <div class="dropdown">
-        <form style="display: inline" action="#" method="get">
-            <button class="dropbtn">Contact us!  </button>
-        </form>
-        <i class="fa fa-caret-down"></i>
-        <div class="dropdown-content">
-            <a href="contact_form.html">Contact form</a>
-            <a href="accounts.html">Associated media accounts</a>
+    <div class="dropdown-menu">
+        <form style="display: inline">
+            <button class="menu-btn">Contact us!</button> </form>
+        <div class="menu-content">
+            <a class="links-hidden" href="../contact/form.php">Contact form</a>
+            <a class="links-hidden" href="../html/accounts.php">Associated media accounts</a>
         </div>
     </div>
-
-    <div class="dropdown">
-        <form style="display: inline" action="#" method="get">
-            <button class="dropbtn">Others</button>
-        </form>
-        <i class="fa fa-caret-down"></i>
-        <div class="dropdown-content">
-            <a href="about.html">About us</a>
-            <a href="member.html">Become a member</a>
-            <a href="donate.html">Donate</a>
+    <div class="dropdown-menu">
+        <form style="display: inline">
+            <button class="menu-btn">Others</button> </form>
+        <div class="menu-content">
+            <a class="links-hidden" href="../html/about.php">About us</a>
+            <a class="links-hidden" href="../html/member.php">Become a member</a>
+            <a class="links-hidden" href="../html/christmas_card.php">Christmas</a>
+            <a class="links-hidden" href="../html/donate.php">Donate</a>
         </div>
     </div>
-
-    <div class="acc">
-        <div class="dropdown">
-            <form style="display: inline" action="../myAccount/myAccount.php" method="get">
-                <button class="dropbtn">My account</button>
-            </form>
-        </div>
-        <img src="../assets/logo.png" alt="">
-    </div>
-</div>
-</body>
-</html>
+    <form style="display: inline" action="../myAccount/myAccount.php" method="get">
+        <button class="account">My Account</button>
+        <img src="../assets/logo.png" alt=""> </form>
+</nav>

@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,26 +15,20 @@ session_start();
 
 <?php include("../menu/menu_bar.html"); ?>
 
-<div class="login">
-    <h1>Login</h1>
-    <form action="authenticate.php" method="post">
-        <label for="username"><i class="fas fa-user-circle"></i></label>
+<div class="signUp">
+    <h1>Sign Up</h1>
+    <form action="signUp.php" method="post">
+        <label for="username"><i class="fas fa-user"></i></label>
         <input type="text" name="username" placeholder="Username" id="username" required>
-
+        <label for="email"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="email" placeholder="E-mail" id="email" required>
         <label for="password"><i class="fas fa-lock"></i></label>
         <input type="password" name="password" placeholder="Password" id="password" required>
         <input type="submit" value="Submit">
     </form>
 
 </div>
-
-        <?php
-        if(isset($_SESSION["registered"]))
-        {
-            echo "<p align=center>You have successfully registered, now you can login!</p>";
-        }
-        ?>
-<p class="det">Not a member? <a href="signUpForm.php">Sign Up</a> </p>
+<p class="det">Already a member? <a href="logIn.php">Log In</a> </p>
 
 </body>
 
