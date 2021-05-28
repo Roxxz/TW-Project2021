@@ -56,8 +56,8 @@ $con = BD::get_con();
         </form>
         <i class="fa fa-caret-down"></i>
         <div class="dropdown-content">
-            <a href="../html/feedback_form.html">Add your own feeback</a>
-            <a href="../feedback/feedback_users.php">Feedback from users</a>
+            <a href="../feedback/feedback_form.html">Add your own feedback</a>
+            <a href="../feedback/feedback_users.php" method="get">Feedback from users</a>
             <a href="../feedback/feedback_companies.php" method="get">Feedback from other companies</a>
         </div>
     </div>
@@ -100,15 +100,15 @@ $row = mysqli_fetch_array($result); ?>
 
 <div class="feedbackTextBox">
     <?php
-    echo "First Name:  " . $row['nume'] . "<br />".
-        "Last Name:  " . $row['prenume'] . " " ."<br />".
-        "Country: " . $row['tara'] . " " ."<br />".
-        "Message: ". $row['mesaj'] . " " ."<br />";
+    echo "First Name:  " . $row['nume'] . "<br />" .
+        "Last Name:  " . $row['prenume'] . " " . "<br />" .
+        "Country: " . $row['tara'] . " " . "<br />" .
+        "Message: " . $row['mesaj'] . " " . "<br />";
     while ($row = mysqli_fetch_array($result)) {
-        echo "First Name:  " . $row['nume'] ."<br />".
-            "Last Name:  " . $row['prenume'] ."<br />".
-            "Country: " . $row['tara'] . "<br />".
-            "Message: ". $row['mesaj'] ."<br />";
+        echo "First Name:  " . $row['nume'] . "<br />" .
+            "Last Name:  " . $row['prenume'] . "<br />" .
+            "Country: " . $row['tara'] . "<br />" .
+            "Message: " . $row['mesaj'] . "<br />";
     } ?>
 </div>
 
