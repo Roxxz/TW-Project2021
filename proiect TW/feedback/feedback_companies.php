@@ -22,19 +22,17 @@ $con = BD::get_con();
 <?php include("../menu/menu_bar.html");
 
 $result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='companie'");
-$row = mysqli_fetch_array($result); ?>
+ ?>
 
-<div class="feedbackTextBox">
+<div class="grid-container">
     <?php
-    echo "First Name:  " . $row['nume'] . "<br />" .
-        "Last Name:  " . $row['prenume'] . " " . "<br />" .
-        "Country: " . $row['tara'] . " " . "<br />" .
-        "Message: " . $row['mesaj'] . " " . "<br />";
     while ($row = mysqli_fetch_array($result)) {
-        echo "First Name:  " . $row['nume'] . "<br />" .
-            "Last Name:  " . $row['prenume'] . "<br />" .
-            "Country: " . $row['tara'] . "<br />" .
-            "Message: " . $row['mesaj'] . "<br />";
+        echo '<div class="feedbackTextBox">'.
+            "First Name:  " . $row['nume'] . "<br />" .'<hr>'.
+            "Last Name:  " . $row['prenume'] . "<br />" .'<hr>'.
+            "Country: " . $row['tara'] . "<br />" .'<hr>'.
+            "Message: " . $row['mesaj'] . "<br />" .'<hr>'.
+        '</div>';
     } ?>
 </div>
 
