@@ -4,6 +4,7 @@
 <head>
     <title>ConGratZ</title>
     <meta charset="UTF-8">
+    <link href="../css/about_style.css" rel="stylesheet">
     <link href="../css/page_styles.css" rel="stylesheet">
     <link href="../css/scroll.css" rel="stylesheet">
     <link href="../menu/menu_bar.css" rel="stylesheet">
@@ -16,17 +17,16 @@
 <?php include("../menu/menu_bar.html"); ?>
 
 <h1>Feedback Form </h1>
-<table>
-    <tr>
-        <td>
-            <div class="container">
-                <form action="feedback_form.php" method="post">
+
+            <div class="textbox">
+                <img alt="logo" class="logoPic" src="../assets/logo.png">
+
+                <formular action="feedback_form.php" method="post">
 
                     <ul>
                         <li><label for="fname">First Name</label></li>
                     </ul>
                     <input id="fname" name="fname" placeholder="Your name.." type="text">
-                    <p></p>
                     <ul>
                         <li><label for="lname">Last Name </label></li>
                     </ul>
@@ -48,20 +48,8 @@
                     </ul>
                     <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
                     <p><input type="submit" value="Submit"></p>
-
-
-                </form>
+                </formular>
             </div>
-        </td>
-        <td>
-            <div class="column">
-                <img alt="logo" class="logoPic" src="../assets/logo.png">
-            </div>
-        </td>
-
-    </tr>
-</table>
-
 </body>
 
 </html>

@@ -7,6 +7,14 @@ h1{
     text-align: center;
     color: darkblue;
 }
+
+formular{
+    display: inline-block;
+    float: left;
+    width: 45%;
+    text-align: center;
+}
+
 input[type=text],
 select,
 textarea {
@@ -33,30 +41,25 @@ input[type=submit] {
 
 input[type=submit] {
     background-color: #45a049;
-}
-
-.container {
-    border-radius: 5px;
-    padding: 20px;
-    margin-left: 100px;
-}
-
-.column {
-    float: left;
+    width: auto;
     justify-content: center;
 }
 
 .logoPic {
+    margin-top: 20px;
+    float: right;
     width: 720px;
     height: 500px;
-    justify-content: flex-end;
+    display: inline-block;
 }
+ img{
+     float: right;
+     display: inline-block;
+     justify-content: center;
+ }
 
-table {
-    width: 100%;
-    vertical-align: middle;
-}
-
-tr {
-    vertical-align: middle;
-}
+ .textbox{
+     justify-content: center;
+    text-align: center;
+     background-color: transparent;
+ }
