@@ -11,3 +11,51 @@ h1 {
     margin-top: 60px;
     margin-left: 20px;
 }
+
+.dropbtn{
+    background-color: #E6D0CC;
+    color: black;
+    border-radius: 10px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    opacity: 0.8;
+    border: 1px solid #000000;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.picItem
+{
+    margin: 20px;
+    text-align: center;
+}
+
+.picItem img{
+    float: none;
+    width: auto;
+    height: 250px;
+    justify-content: center;
+
+}
+
+.picItem button {
+    background-color: #E6D0CC;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+}
