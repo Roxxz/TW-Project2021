@@ -32,18 +32,14 @@ session_start();
 
 </div>
 
-        <?php
-        if(isset($_SESSION["registered"]))
-        {
-            echo "<p align=center>You have successfully registered, now you can login!</p>";
-        }
-        ?>
-        <?php
-        if(isset($_SESSION["passwordChanged"]))
-        {
-            echo "<p align=center>You have successfully changed your password, now you can login!</p>";
-        }
-        ?>
+        <?php if(isset($_SESSION["registered"])){ ?>
+            <p class="det"><?php echo "You have successfully registered, now you can login!" ?></p>
+        <?php } ?>
+        <?php if(isset($_SESSION["passwordChanged"])){ ?>
+            <p class="det"><?php echo "You have successfully changed your password, now you can login!" ?></p>
+        <?php } ?>
+
+
 <p class="det"><a href="forgotPasswordForm.php">Forgot password</a> </p>
 
 <p class="det">Not a member? <a href="signUpForm.php">Sign Up</a> </p>
