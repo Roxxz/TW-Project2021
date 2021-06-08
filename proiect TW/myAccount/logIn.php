@@ -38,6 +38,14 @@ session_start();
             echo "<p align=center>You have successfully registered, now you can login!</p>";
         }
         ?>
+        <?php
+        if(isset($_SESSION["passwordChanged"]))
+        {
+            echo "<p align=center>You have successfully changed your password, now you can login!</p>";
+        }
+        ?>
+<p class="det"><a href="forgotPasswordForm.php">Forgot password</a> </p>
+
 <p class="det">Not a member? <a href="signUpForm.php">Sign Up</a> </p>
 
 </body>

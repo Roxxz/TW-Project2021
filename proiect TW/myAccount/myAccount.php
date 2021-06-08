@@ -33,6 +33,7 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="content">
         <h2>Home Page</h2>
         <p>Welcome back, <?=$_SESSION['name']?>!</p>
+        <h2>Your cards</h2>
     </div>
 
 </body>
