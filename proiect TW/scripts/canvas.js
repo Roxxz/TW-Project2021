@@ -90,7 +90,7 @@ async function preview() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function (e) {
+document.addEventListener('DOMContentLoaded', function (e) { //https://stackoverflow.com/questions/48048797/base64canvas-to-blob-blob-to-php
     /*
         Button click event handler
         create FormData Object and read the canvas data
