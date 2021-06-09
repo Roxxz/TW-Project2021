@@ -19,6 +19,7 @@ $con = BD::get_con();
 
 <body>
 
+
 <?php include("../menu/menu_bar.html");
 $result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='user'");
  ?>

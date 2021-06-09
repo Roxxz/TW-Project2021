@@ -31,7 +31,7 @@
         <br>Or you can have a quick look here:
 
     </p>
-    <a href="premium_business_card.php"><img class="businessButton" src="../assets/businessButton.png" alt="businessButtoon"></a>
+    <a href="business_card.php"><img class="businessButton" src="../assets/businessButton.png" alt="businessButtoon"></a>
 
     <img class="new2" src="../assets/newButton.png" alt="new2">
 
@@ -39,9 +39,9 @@
         Are you organizing a Halloween party and want to invite everyone you know?<br> There's an easy way to do that, by customizing a Halloween Card with your date and place.<br> Just pick a design you like and get spooky!
     </p>
 
-    <a href="#"><img class="halloweenCard" src="../birthday%20card/halloweenCard.png" alt="haloweenCard"></a>
+    <a href="greeting_card.php"><img class="halloweenCard" src="../greeting/halloweenCard.png" alt="haloweenCard"></a>
 
-    <a href="halloween_card.php"><img class="moreButton" src="../assets/moreButton.png" alt="more"></a>
+    <a href="greeting_card.php"><img class="moreButton" src="../assets/moreButton.png" alt="more"></a>
 
 </body>
 

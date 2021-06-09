@@ -21,7 +21,7 @@ $con = BD::get_con();
 
 <?php include("../menu/menu_bar.html");
 
-$result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='companie'");
+$result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='company'");
  ?>
 
 <div class="grid-container">
@@ -32,7 +32,7 @@ $result = mysqli_query($con, "SELECT * FROM feedback WHERE tipPersoana='companie
             "Last Name:  " . $row['prenume'] . "<br />" .'<hr>'.
             "Country: " . $row['tara'] . "<br />" .'<hr>'.
             "Message: " . $row['mesaj'] . "<br />" .'<hr>'.
-        '</div>';
+            '</div>';
     } ?>
 </div>
 
