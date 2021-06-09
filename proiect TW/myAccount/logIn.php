@@ -38,7 +38,9 @@ session_start();
         <?php if(isset($_SESSION["passwordChanged"])){ ?>
             <p class="det"><?php echo "You have successfully changed your password, now you can login!" ?></p>
         <?php } ?>
-
+        <?php if(isset($_SESSION["editing"])){ ?>
+            <p class="det"><?php echo "You have to log in before creating cards." ?></p>
+        <?php } ?>
 
 <p class="det"><a href="forgotPasswordForm.php">Forgot password</a> </p>
 

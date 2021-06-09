@@ -26,25 +26,14 @@ if (!isset($_SESSION['loggedin'])) {
 <h1>Make your own card</h1>
 
 <div class="edit-options">
-    <h2>Greeting card model</h2>
+    <h2>Business card model</h2>
     <label for="model"></label><select onchange="setModel(this);" name="model" id="model">
         <option> </option>
         <option value="1">Model 1</option>
         <option value="2">Model 2</option>
     </select>
-    <h2>Greeting text</h2>
+    <h2>Motto</h2>
     <label for="greeting_text"></label><input type="text" id="greeting_text" name="greeting_text">
-<!--    <h2>Position</h2>-->
-<!--    <label for="text_position"></label><select onchange="setTextPosition(this);" name="text_position" id="text_position">-->
-<!--        <option> </option>-->
-<!--        <option value="1">Up-left</option>-->
-<!--        <option value="2">Up-center</option>-->
-<!--        <option value="3">Up-right</option>-->
-<!--        <option value="4">Center</option>-->
-<!--        <option value="5">Down-left</option>-->
-<!--        <option value="6">Down-center</option>-->
-<!--        <option value="7">Down-right</option>-->
-<!--    </select>-->
     <h2>Text font</h2>
     <label for="Font"></label><select onchange="getFont(this);" name="Font" id="Font">
         <option> </option>
@@ -79,7 +68,7 @@ if (!isset($_SESSION['loggedin'])) {
     <h2>Background Colour</h2>
     <label for="back_color"></label><input type="color" id="back_color" name="back_color">
     <h2>Image</h2>
-        <input type="file">
+    <input type="file">
     <br><br>
     <button onclick="preview()" type="submit" value="Submit">Preview</button>
     <br>
