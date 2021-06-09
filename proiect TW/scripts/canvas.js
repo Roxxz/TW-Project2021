@@ -1,6 +1,7 @@
 let greeting_text, font_colour, back_colour, font_text, font_size, canvas, ctx, model, checked;
 let text_x, text_y;
 let image_x, image_y, image_width, image_height;
+let qrcode;
 
 async function setModel(selectTag){
     model = selectTag.options[selectTag.selectedIndex].value;
@@ -114,5 +115,10 @@ async function downloadImage(data, filename = 'untitled.jpeg') {
 async function sendLink(){
     canvas = document.getElementById("myCanvas");
     let dataURL = canvas.toDataURL("image/jpg", 1.0);
-    document.getElementById("canvas-content").innerHTML =dataURL; //cineva sa se ocupe de css
+    // document.getElementById("canvas-content").innerHTML =dataURL; //cineva sa se ocupe de css
+    qrcode = new QRCode(document.getElementById("qrcode"), {
+        width: 100,
+        height: 100
+    });
+    qrcode.makeCode("http://naver.com");
 }

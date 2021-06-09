@@ -17,7 +17,8 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../menu/menu_bar.css">
     <link rel="stylesheet" href="make_greetingCard.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <script src="canvas.js" type="text/javascript" defer></script>
+    <script src="../scripts/canvas.js" type="text/javascript" defer></script>
+    <script src="../scripts/qrcode.js" type="text/javascript" ></script>
 
 </head>
 
@@ -120,6 +121,11 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="divTableRow">
             <div class="divTableCell">
                 <div id="canvas-content"></div>
+            </div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">
+                <div id="qrcode" style="width:100px; height: 100px; "></div>
             </div>
         </div>
 </div>
