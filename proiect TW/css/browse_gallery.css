@@ -3,7 +3,7 @@
     max-width: 200px;
     margin: auto;
     text-align: center;
-    font-family: arial;
+    font-family: arial, serif;
 }
 
 .card button {
@@ -14,6 +14,7 @@
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    margin: 5px 0 20px 0;
     justify-content: center;
 }
 
@@ -22,8 +23,8 @@
 }
 .card img{
     float: none;
-    width: auto;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     justify-content: center;
 }
 .grid-container {

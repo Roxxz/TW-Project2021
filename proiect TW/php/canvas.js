@@ -1,15 +1,6 @@
-let greeting_text, from_text, to_text, font_colour, back_colour, font_text, font_size, canvas, ctx, model, checked;
-let text_position, text_x, text_y;
-let image_position, image_x, image_y, image_width, image_height;
-
-
-async function setImagePosition(selectTag){
-    image_position = selectTag.options[selectTag.selectedIndex].value;
-}
-
-async function setTextPosition(selectTag){
-    text_position = selectTag.options[selectTag.selectedIndex].value;
-}
+let greeting_text, font_colour, back_colour, font_text, font_size, canvas, ctx, model, checked;
+let text_x, text_y;
+let image_x, image_y, image_width, image_height;
 
 async function setModel(selectTag){
     model = selectTag.options[selectTag.selectedIndex].value;
@@ -24,7 +15,7 @@ async function getFontSize(selectTag){
 }
 
 async function preview() {
-    if(model == "1"){
+    if(model === "1" || model === "3"){
         document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="500" height="600"
             style="border:1px solid #d3d3d3;">`;
     }
@@ -37,23 +28,36 @@ async function preview() {
     ctx = canvas.getContext("2d");
 
     greeting_text = document.getElementById("greeting_text").value;
-    // from_text = document.getElementById("from_text").value;
-    // to_text = document.getElementById("to_text").value;
     font_colour = document.getElementById("font_color").value;
     back_colour = document.getElementById("back_color").value;
     checked = document.getElementById("checkbox");
+    if(model === "3"){
+        image_x = 140;
+        image_y = canvas.height/2;
+        image_width = 200;
+        image_height = 200;
+        text_x = 50;
+        text_y = 150;
+    }else if(model === "4"){
+        image_x = 300;
+        image_y = canvas.height/2;
+        image_width = 200;
+        image_height = 200;
+        text_x = 160;
+        text_y = 150;
+    }
 
     // console.log(font_colour);
     // console.log(font_size);
     // console.log(font_text);
     // console.log(greeting_text);
     if(model === "1"){
-        image_x = 160;
+        image_x = 140;
         image_y = 50;
         image_width = 200;
         image_height = 200;
-        text_x = 150;
-        text_y = canvas.height/2;
+        text_x = 50;
+        text_y = canvas.height/2 + 100;
     }else if(model === "2"){
         image_x = 300;
         image_y = canvas.height/2;
