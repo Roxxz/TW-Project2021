@@ -11,7 +11,7 @@
 <body prefix="schema: http://schema.org">
     <header>
         <div class="banner">
-            <a class="logo" href="main_page.php"> Main Site</a>
+            <a class="logo" href="../php/main_page.php"> Main Site</a>
 
             <div class="status">
                 <b>ConGratZ - Documentation </b>
@@ -35,13 +35,15 @@
                 Tehnologii folosite
             </dt>
             <dd>
-                HTML, CSS.
+                HTML5, CSS3, PHP, JavaScript, AJAX, Apache (web server), SQL(MySQL).
             </dd>
             <dt>
             Proiect realizat în cadrul cursului "Tehnologii Web" de la Facultatea de Informatică, Universitatea "Al. I. Cuza" Iași
             </dt>
         </dl>
     </div>
+
+    <hr>
 
     <section id="abstract" typeof="sa:Abstract" role="doc-abstract">
         <h2>Cerința</h2>
@@ -54,49 +56,50 @@
         <br> -Aplicația va permite și realizarea de carți de vizită, eventual pe baza unui document XML ce include numele + datele de contact ale mai multor persoane, fiind capabilă să exporte aceste carduri într-un fișier PDF pentru a fi tiparite. Cardurile vor fi disponibile și în format electronic (e.g.
         vcard sau QR code) ce va putea fi trimis ca fișier atașat unui email.
         </p>
-        <p></p>
     </section>
     <section id="baza_de_date">
         <h2>Baza de date</h2>
-        Va fi folosită pentru evidența conturilor și feedback-urilor.
+        Este folosită pentru evidența conturilor,a donatiilor, formularelor de contact și de feedback, cât și pentru afișarea lor.
     </section>
     <section id="cont">
         <h2>Profilul unui utilizator</h2>
-        Website-ul "ConGratZ" pune la dispoziția persoanelor care-l vizitează, opțiunea de a-și crea un cont propriu unde își vor putea salva creațiile și distribui cu ceilalți utilizatori.
-        <br> Pentru cei care nu doresc să-și creeze un cont, experiența pe site este limitată. Vor putea doar să-și descarce creația/creațiile în fomat PDF/JPG.
+        Website-ul "ConGratZ" pune la dispoziția persoanelor care-l vizitează, opțiunea de a-și crea un cont propriu de unde își vor putea salva creațiile și distribui cu ceilalți utilizatori externi.
+        De aseamenea, aceștia vor putea să îsi vizualizeze pagina de profil, unde vor fi detaliile contului.
+        <br> În cazul în care utilizatorul nu este logat și dorește să creeze o felicitare sau un card, acesta va fi redirecționat către pagina de login.
     </section>
     <section id="login">
+        <section id="inreg">
+            <h2>Înregistrarea</h2>
+            Înregistrarea se face cu Username, E-mail și parolă unice.
+        </section>
         <h2>Login</h2>
-        Logarea se poate face cu Username, E-mail și parolă unice.
-        <br> Aceasta nu este permisă dacă nu sunt completate toate câmpurile prezente în mod corect.
-    </section>
-    <section id="inreg">
-        <h2>Înregistrarea</h2>
-        Înregistrarea se face respectând cerințele de mai sus.
+        Logarea se face cu Username-ul și parola folosite la momentul înregistrarii în site.
+        <br> Aceasta nu este permisă dacă nu sunt completate toate câmpurile prezente în mod corect. În caz contrar, va fi afișat un mesaj de eroare.
     </section>
     <section id="reset">
         <h2>Resetarea parolei</h2>
-        Resetarea parolei se poate face urmând opțiunea prezentă la "Login" numită "Reset password".
+        Resetarea parolei se poate face urmând opțiunea prezentă în pagina de "Login" numită "Forgot password".
     </section>
     <section id="logout">
         <h2>Logout</h2>
-        Se va încheia sesiunea user-ului curent și îl va redirecționa către pagina principală a site-ului.
-    </section>
-    <section id="delete">
-        <h2>Ștergere cont</h2>
-        Se va șterge definitiv contul utilizatorului din baza de date.
+        Se va încheia sesiunea user-ului curent și îl va redirecționa către pagina de Login.
     </section>
     <section id="creare-felicitari">
         <h2>Crearea și editarea felicitărilor și cărților de vizită</h2>
-        Fiecare felicitare și carte de vizită se poate modifica după placul utilizatorului, prin butonul "Try it out" care îl va redirecționa către pagina de editare numită "Canvas".
+        Fiecare felicitare și carte de vizită se poate modifica după placul utilizatorului, prin butonul "make your own" care îl va redirecționa către pagina de editare.
+        În pagina de editare, utilizatorul personalizează felicitarea sau cardul cu mesaje proprii sau prin adăugarea unei imagini.
+        Există două modele de felicitări: vertical și orizontal.
+        De asemenea, se poate schimba fontul( dimensiunea și culoarea) și culoarea fundalului.
     </section>
     <section id="trimitere-felicitari">
         <h2>Trimiterea felicitarilor și cărtilor de vizită</h2>
-        La sfârșitul paginii de editare "Canvas", creația finală se poate salva în cont, trimite unui alt utilizator sau descărcă în format PDF/JPG.
+        Înainte de a trimite o felicitare, aceasta va fi salvată pe server-ul local utilizând tehnologia AJAX.
+        După ce a fost salvată, creația finală se poate descărca sau trimite unui utilizator extern prin intermediul unui cod QR sau link.
     </section>
     <section id="feedback">
         <h2>Feedback</h2>
-        Orice utilizator cu sau fără un cont existent își va putea împărtăși experiența pe site sau va putea ajuta la îmbunătățirea acestuia.
+        Orice utilizator cu sau fără un cont existent își va putea împărtăși experiența pe site sau va putea ajuta la îmbunătățirea acestuia, oferind un mesaj prin intermediul completării formularului de feedback.
+    Aceste feedback-uri vor fi stocate în tabela cu același nume din Baza de Date.
     </section>
     <section id="vizualizare-feedback">
         <h2>Vizualizarea feedback-urilor</h2>
@@ -108,7 +111,7 @@
     </section>
     <section id="donatii">
         <h2>Donații</h2>
-        Pentru a oferi suport echipei, se poate dona prin pagina de donații.
+        Pentru a oferi suport echipei, pot fi oferite donații prin completarea formularului aflat in pagina "Donations".
     </section>
 
 </body>
