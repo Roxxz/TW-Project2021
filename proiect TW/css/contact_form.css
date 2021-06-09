@@ -1,20 +1,3 @@
-body {
-    box-sizing: border-box;
-    font-family: Georgia serif;
-    font-size: 20px;
-}
-h1{
-    text-align: center;
-    color: darkblue;
-}
-
-formular{
-    display: inline-block;
-    float: left;
-    width: 45%;
-    text-align: center;
-}
-
 input[type=text],
 select,
 textarea {
@@ -45,20 +28,7 @@ input[type=submit] {
     justify-content: center;
 }
 
-.logoPic {
-    margin-top: 20px;
-    float: right;
-    width: 720px;
-    height: 500px;
-    display: inline-block;
-}
- img{
-     float: right;
-     display: inline-block;
-     justify-content: center;
- }
-
- .textbox{
+.textbox{
      justify-content: center;
     text-align: center;
      background-color: transparent;
