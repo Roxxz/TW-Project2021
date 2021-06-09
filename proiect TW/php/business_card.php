@@ -15,7 +15,7 @@
 <body>
 <?php include("../menu/menu_bar.html"); ?>
 </body>
-<h1>Choose between diferent types of business cards or <form style="display: inline-block" action="#" method="get">
+<h1>Choose between diferent types of business cards or <form style="display: inline-block" action="make_business_card.php" method="get">
         <button class="dropbtn">make your own</button> </form> from scratch! </h1>
 <div class="grid-container">
     <?php

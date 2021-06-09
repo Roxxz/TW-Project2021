@@ -16,7 +16,7 @@
 
 <?php include("../menu/menu_bar.html"); ?>
 
-    <h1>Choose between diferent types of cards or <form style="display: inline-block" action="#" method="get">
+    <h1>Choose between diferent types of cards or <form style="display: inline-block" action="make_greeting_card.php" method="get">
             <button class="dropbtn">make your own</button> </form> from scratch! </h1>
     <div class="grid-container">
         <?php

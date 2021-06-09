@@ -81,8 +81,13 @@ if (!isset($_SESSION['loggedin'])) {
     <h2>Image</h2>
         <input type="file">
     <br><br>
+
     <button onclick="preview()" type="submit" value="Submit">Preview</button>
     <br>
+    <button onclick="save()" type="submit" value="Save">Save</button>
+    <br>
+<!--    <button onclick="window.location.href='b.php'">Click me</button>-->
+    <button onclick="sendLink()" type="submit" value="Send">Send</button>
     <div id="canvas-content"></div>
 
 </body>

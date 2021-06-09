@@ -88,3 +88,27 @@ async function preview() {
         reader.readAsDataURL(file);
     }
 }
+
+
+async function save() {
+
+    // Convert canvas to image
+    canvas = document.getElementById("myCanvas");
+        let dataURL = canvas.toDataURL("image/jpg", 1.0);
+        await downloadImage(dataURL, 'my-canvas.jpg');
+}
+
+// Save | Download image
+async function downloadImage(data, filename = 'untitled.jpeg') {
+    let a = document.createElement('a');
+    a.href = data;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+}
+
+async function sendLink(){
+    canvas = document.getElementById("myCanvas");
+    let dataURL = canvas.toDataURL("image/jpg", 1.0);
+    document.getElementById("canvas-content").innerHTML =dataURL; //cineva sa se ocupe de css
+}
