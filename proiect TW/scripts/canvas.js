@@ -48,10 +48,6 @@ async function preview() {
         text_y = 150;
     }
 
-    // console.log(font_colour);
-    // console.log(font_size);
-    // console.log(font_text);
-    // console.log(greeting_text);
     if (model === "1") {
         image_x = 140;
         image_y = 50;
@@ -152,6 +148,6 @@ async function sendLink() {
         height: 150
 
     });
-    //in newLink ai path ul card ului creat, ar merge pus intr un buton sau ceva
+    document.getElementById("imageLink").innerHTML = newLink;
     qrcode.makeCode(newLink);
 }

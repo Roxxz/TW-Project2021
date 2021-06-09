@@ -27,8 +27,8 @@
     $files = glob("../greeting/*.*");
     for ($i = 0; $i < count($files); $i++) {
         $image = $files[$i];
-        echo '<div class="card">' . '<img src="' . $image . '" alt="Random image" />' . '</div>';
-        // '<button type="submit" onclick="window.open(`$image`)" >Download!</button>'. '</div>';
+        echo '<div class="card">'.'<img src="' . $image . '" alt="Random image" />' .
+            '<form action="download_greeting.php?file='.$image.'" method="post" enctype="multipart/form-data"><button>Try it out!</button></form>'. '</div>';
     }
     ?>
 </div>

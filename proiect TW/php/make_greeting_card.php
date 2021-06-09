@@ -128,10 +128,14 @@ if (!isset($_SESSION['loggedin'])) {
                 <div id="canvas-content"></div>
             </div>
         </div>
-
         <div class="divTableRow">
             <div class="divTableCell">
-                <div id="qrcode" style="width:100px; height: 100px; "></div>
+                <div id="imageLink"> </div>
+            </div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">
+                <div id="qrcode" style="width:200px; height: 200px; position: absolute; margin: 0 0 0 600px; "></div>
             </div>
         </div>
     </div>
