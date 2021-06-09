@@ -15,44 +15,62 @@
 <body>
 <?php include("../menu/menu_bar.html"); ?>
 
-    <div class="grid-container">
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
-        <div class="card">
-            <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
-            <p><button>Try it out</button></p>
-        </div>
+<div class="grid-container">
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
     </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+    <div class="card">
+        <img src="../birthday%20card/otherCard.jpg" alt="Other Card">
+        <p>
+            <button>Try it out</button>
+        </p>
+    </div>
+</div>
 
 
 </body>

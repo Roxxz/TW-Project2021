@@ -18,17 +18,20 @@
 
 <?php include("../menu/menu_bar.html"); ?>
 
-<h1>Choose between different types of cards or <button class="dropbtn" ><a href="make_greeting_card.php"> make your own</a></button> from scratch! </h1>
-    <div class="grid-container">
-        <?php
-        $files = glob("../greeting/*.*");
-        for ($i = 0; $i < count($files); $i++) {
-            $image = $files[$i];
-            echo '<div class="card">'.'<img src="' . $image . '" alt="Random image" />'. '</div>';
-                               // '<button type="submit" onclick="window.open(`$image`)" >Download!</button>'. '</div>';
-        }
-        ?>
-    </div>
+<h1>Choose between different types of cards or
+    <button class="dropbtn"><a href="make_greeting_card.php"> make your own</a></button>
+    from scratch!
+</h1>
+<div class="grid-container">
+    <?php
+    $files = glob("../greeting/*.*");
+    for ($i = 0; $i < count($files); $i++) {
+        $image = $files[$i];
+        echo '<div class="card">' . '<img src="' . $image . '" alt="Random image" />' . '</div>';
+        // '<button type="submit" onclick="window.open(`$image`)" >Download!</button>'. '</div>';
+    }
+    ?>
+</div>
 
 </body>
 

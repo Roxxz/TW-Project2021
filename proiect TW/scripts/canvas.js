@@ -1,28 +1,26 @@
-
-
 let greeting_text, font_colour, back_colour, font_text, font_size, canvas, ctx, model, checked;
 let text_x, text_y;
 let image_x, image_y, image_width, image_height;
 let qrcode;
+let newLink;
 
-async function setModel(selectTag){
+async function setModel(selectTag) {
     model = selectTag.options[selectTag.selectedIndex].value;
 }
 
-async function getFont(selectTag){
+async function getFont(selectTag) {
     font_text = selectTag.options[selectTag.selectedIndex].value;
 }
 
-async function getFontSize(selectTag){
+async function getFontSize(selectTag) {
     font_size = selectTag.options[selectTag.selectedIndex].value;
 }
 
 async function preview() {
-    if(model === "1" || model === "3"){
+    if (model === "1" || model === "3") {
         document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="500" height="600"
             style="border:1px solid #d3d3d3;">`;
-    }
-    else{
+    } else {
         document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="800" height="500"
             style="border:1px solid #d3d3d3;">`;
     }
@@ -34,16 +32,16 @@ async function preview() {
     font_colour = document.getElementById("font_color").value;
     back_colour = document.getElementById("back_color").value;
     checked = document.getElementById("checkbox");
-    if(model === "3"){
+    if (model === "3") {
         image_x = 140;
-        image_y = canvas.height/2;
+        image_y = canvas.height / 2;
         image_width = 200;
         image_height = 200;
         text_x = 50;
         text_y = 150;
-    }else if(model === "4"){
+    } else if (model === "4") {
         image_x = 300;
-        image_y = canvas.height/2;
+        image_y = canvas.height / 2;
         image_width = 200;
         image_height = 200;
         text_x = 160;
@@ -54,16 +52,16 @@ async function preview() {
     // console.log(font_size);
     // console.log(font_text);
     // console.log(greeting_text);
-    if(model === "1"){
+    if (model === "1") {
         image_x = 140;
         image_y = 50;
         image_width = 200;
         image_height = 200;
         text_x = 50;
-        text_y = canvas.height/2 + 100;
-    }else if(model === "2"){
+        text_y = canvas.height / 2 + 100;
+    } else if (model === "2") {
         image_x = 300;
-        image_y = canvas.height/2;
+        image_y = canvas.height / 2;
         image_width = 200;
         image_height = 200;
         text_x = 160;
@@ -86,7 +84,7 @@ async function preview() {
         image.src = reader.result;
         var sth = new Image();
         sth.onload = function () {
-                ctx.drawImage(sth, image_x, image_y, image_width, image_height);
+            ctx.drawImage(sth, image_x, image_y, image_width, image_height);
         };
         sth.src = reader.result;
         preview.src = reader.result;
@@ -120,25 +118,24 @@ document.addEventListener('DOMContentLoaded', function (e) {
         };
 
         let callback = function (r) {
-            alert(r)
+            newLink = (' ' + r.toString()).slice(1);
         }
 
-        ajax.call(this,'../php/insertDatabase.php', fd, callback);
+        ajax.call(this, '../php/insertDatabase.php', fd, callback);
     }
 
     document.getElementById('bttn').addEventListener('click', bindEvents);
 
 });
 
-async function save() {
+async function downloadCard() {
 
     // Convert canvas to image
-    // canvas = document.getElementById("myCanvas");
-    //     let dataURL = canvas.toDataURL("image/jpg", 1.0);
-    //     await downloadImage(dataURL, 'my-canvas.jpg');
+    canvas = document.getElementById("myCanvas");
+    let dataURL = canvas.toDataURL("image/jpg", 1.0);
+    await downloadImage(dataURL, 'my-canvas.jpg');
 }
 
-// Save | Download image
 async function downloadImage(data, filename = 'untitled.jpeg') {
     let a = document.createElement('a');
     a.href = data;
@@ -147,13 +144,14 @@ async function downloadImage(data, filename = 'untitled.jpeg') {
     a.click();
 }
 
-async function sendLink(){
+async function sendLink() {
     canvas = document.getElementById("myCanvas");
     let dataURL = canvas.toDataURL("image/jpg", 1.0);
-    // document.getElementById("canvas-content").innerHTML =dataURL; //cineva sa se ocupe de css
     qrcode = new QRCode(document.getElementById("qrcode"), {
-        width: 100,
-        height: 100
+        width: 150,
+        height: 150
+
     });
-    qrcode.makeCode("http://naver.com");
+    //in newLink ai path ul card ului creat, ar merge pus intr un buton sau ceva
+    qrcode.makeCode(newLink);
 }

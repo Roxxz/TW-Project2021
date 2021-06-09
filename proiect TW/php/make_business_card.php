@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-    $_SESSION['editing']=true;
+    $_SESSION['editing'] = true;
     header('Location: ../myAccount/logIn.php');
     exit;
 }
@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="make_greetingCard.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <script src="../scripts/canvas.js" type="text/javascript" defer></script>
-    <script src="../scripts/qrcode.js" type="text/javascript" ></script>
+    <script src="../scripts/qrcode.js" type="text/javascript"></script>
 
 </head>
 
@@ -33,23 +33,24 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="divTableCell">
                 <h2>Business card model</h2>
                 <label for="model"></label><select onchange="setModel(this);" name="model" id="model">
-                    <option> </option>
+                    <option></option>
                     <option value="3">Model 1</option>
                     <option value="4">Model 2</option>
                 </select>
-        </div>
+            </div>
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
                 <h2>Motto</h2>
-                <label for="greeting_text"></label><input type="text" id="greeting_text" name="greeting_text" placeholder="Write something...">
+                <label for="greeting_text"></label><input type="text" id="greeting_text" name="greeting_text"
+                                                          placeholder="Write something...">
             </div>
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
                 <h2>Text font</h2>
                 <label for="Font"></label><select onchange="getFont(this);" name="Font" id="Font">
-                    <option> </option>
+                    <option></option>
                     <option value="Arial">Arial (sans-serif)</option>
                     <option value="Arial Black">Arial Black (sans-serif)</option>
                     <option value="Verdana">Verdana (sans-serif)</option>
@@ -71,7 +72,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="divTableCell">
                 <h2>Font Size</h2>
                 <label for="font_size"></label><select onchange="getFontSize(this);" name="font_size" id="font_size">
-                    <option> </option>
+                    <option></option>
                     <option value="18px ">xx-small</option>
                     <option value="24px ">x-small</option>
                     <option value="30px ">small</option>
@@ -109,7 +110,13 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
-                <button onclick="save()" type="submit" value="Save">Save</button>
+                <button id='bttn' type="submit" value="Save">Save</button>
+                <br>
+            </div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">
+                <button onclick="downloadCard()" type="submit" value="Submit">Download</button>
                 <br>
             </div>
         </div>
@@ -128,7 +135,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <div id="qrcode" style="width:100px; height: 100px; "></div>
             </div>
         </div>
-</div>
+    </div>
 
 </body>
 

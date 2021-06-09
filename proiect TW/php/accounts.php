@@ -14,14 +14,16 @@
 <body>
 <?php include("../menu/menu_bar.html"); ?>
 
-    <h1>Our team</h1>
+<h1>Our team</h1>
 <p>
-    Hello there! In this section you will find some links in case you want to contact directly one of our founding members.
+    Hello there! In this section you will find some links in case you want to contact directly one of our founding
+    members.
 </p>
 <p>
     You can also fill in the form you'll find
 <form style="display: inline" action="contact_form.html" method="get">
-    <button class="dropbtn">here</button> to let us know what you think about us!
+    <button class="dropbtn">here</button>
+    to let us know what you think about us!
 </form>
 </p>
 <br>
