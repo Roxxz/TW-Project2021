@@ -1,3 +1,5 @@
+
+
 let greeting_text, font_colour, back_colour, font_text, font_size, canvas, ctx, model, checked;
 let text_x, text_y;
 let image_x, image_y, image_width, image_height;
@@ -94,13 +96,46 @@ async function preview() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function (e) {
+    /*
+        Button click event handler
+        create FormData Object and read the canvas data
+        then send via ajax to a PHP script ( in this case the same page )
+        to process the uploaded image.
+    */
+    function bindEvents(event) {
+
+        let fd = new FormData();
+        fd.append('action', 'save');
+        fd.append('image', canvas.toDataURL('image/jpg').replace(/^data:image\/(png|jpg);base64,/, ''));
+        fd.append('filename', Math.random() + '.jpg');
+
+        let ajax = function (url, data, callback) {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) callback.call(this, this.response);
+            };
+            xhr.open('POST', url, true);
+            xhr.send(data);
+        };
+
+        let callback = function (r) {
+            alert(r)
+        }
+
+        ajax.call(this,'../php/insertDatabase.php', fd, callback);
+    }
+
+    document.getElementById('bttn').addEventListener('click', bindEvents);
+
+});
 
 async function save() {
 
     // Convert canvas to image
-    canvas = document.getElementById("myCanvas");
-        let dataURL = canvas.toDataURL("image/jpg", 1.0);
-        await downloadImage(dataURL, 'my-canvas.jpg');
+    // canvas = document.getElementById("myCanvas");
+    //     let dataURL = canvas.toDataURL("image/jpg", 1.0);
+    //     await downloadImage(dataURL, 'my-canvas.jpg');
 }
 
 // Save | Download image

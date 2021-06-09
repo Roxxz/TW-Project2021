@@ -107,7 +107,8 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
             <div class="divTableRow">
                 <div class="divTableCell">
-                    <button onclick="save()" type="submit" value="Save">Save</button>
+               <button onclick="save()" id='bttn' type="submit" value="Save">Save</button>
+<!--                 <input type='button' id='bttn' value='SaveCelalalt' />-->
                     <br>
                 </div>
             </div>
