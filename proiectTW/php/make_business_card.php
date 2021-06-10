@@ -17,33 +17,22 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../menu/menu_bar.css">
     <link rel="stylesheet" href="make_greetingCard.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <script src="../scripts/canvas.js" type="text/javascript" defer></script>
+    <script src="../scripts/cards.js" type="text/javascript" defer></script>
     <script src="../scripts/qrcode.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 <?php include("../menu/menu_bar.html"); ?>
-<h1>Make your own card</h1>
-
+<h1>Make your own business card</h1>
 
 <div class="divTable blueTable">
     <div class="divTableBody">
         <div class="divTableRow">
             <div class="divTableCell">
-                <h2>Business card model</h2>
-                <label for="model"></label><select onchange="setModel(this);" name="model" id="model">
-                    <option></option>
-                    <option value="3">Model 1</option>
-                    <option value="4">Model 2</option>
-                </select>
-            </div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell">
-                <h2>Motto</h2>
-                <label for="greeting_text"></label><input type="text" id="greeting_text" name="greeting_text"
-                                                          placeholder="Write something...">
+                <h2>Upload your data</h2>
+                <input id="fileChooser" type="file" accept=".xml">
+                <p id="demo"></p>
             </div>
         </div>
         <div class="divTableRow">
@@ -98,7 +87,7 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="divTableRow">
             <div class="divTableCell">
                 <h2>Logo Image</h2>
-                <input type="file">
+                <input id="photo" type="file" accept=".jpg, .jpeg, .png">
                 <br><br>
             </div>
         </div>
