@@ -144,8 +144,8 @@ async function sendLink() {
     canvas = document.getElementById("myCanvas");
     let dataURL = canvas.toDataURL("image/jpg", 1.0);
     qrcode = new QRCode(document.getElementById("qrcode"), {
-        width: 150,
-        height: 150
+        width: 500,
+        height: 500
 
     });
     document.getElementById("imageLink").innerHTML = newLink;

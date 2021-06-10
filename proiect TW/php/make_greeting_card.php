@@ -25,7 +25,6 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
 <?php include("../menu/menu_bar.html"); ?>
 <h1>Make your own card</h1>
-
 <div class="divTable blueTable">
     <div class="divTableBody">
         <div class="divTableRow">
@@ -135,11 +134,12 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
-                <div id="qrcode" style="width:200px; height: 200px; position: absolute; margin: 0 0 0 600px; "></div>
+               <div id="qrcode" style=" width: 400px; height: 400px; position: absolute; margin: 0 0 0 500px; "></div>
+                <br><br>
             </div>
         </div>
     </div>
-
+</div>
 </body>
 
 </html>

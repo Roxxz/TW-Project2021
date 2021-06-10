@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['image'], $_POST['filen
     $filename = $_POST['filename'];
 
     /* edit to suit own environment */
-    $savepath = 'C:/xampp/htdocs/proj/proiect TW/assets/';
+    $savepath = 'C:/xampp/htdocs/TW2021/proiect TW/assets/';
 
     $target = $savepath . $filename;
     $result = file_put_contents($target, base64_decode($image));

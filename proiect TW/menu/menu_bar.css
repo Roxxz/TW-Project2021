@@ -15,10 +15,12 @@
     margin-top: 15px;
 
 }
+
 .dropdown-menu {
     float: left;
     overflow: hidden;
 }
+
 .menu-content {
     display: none;
     position: absolute;
@@ -26,15 +28,18 @@
     min-width: 160px;
     z-index: 1;
 }
-.menu-content a{
+
+.menu-content a {
     float: none;
     display: block;
 }
-nav{
+
+nav {
     background-color: black;
     overflow: hidden;
 }
-.links,.links-hidden{
+
+.links, .links-hidden {
     color: white;
     padding: 12px 16px;
     font-size: 18px;
@@ -45,32 +50,38 @@ nav{
     text-align: left;
 }
 
-.links{
+.links {
     color: white;
 }
 
-.links-hidden{
+.links-hidden {
     display: block;
 }
-.links{
+
+.links {
     display: inline-block;
 }
-.links-hidden:hover,.links:hover {
+
+.links-hidden:hover, .links:hover {
     background-color: #f9f9f9;
     color: black;
 }
+
 .dropdown-menu:hover .menu-content {
     display: block;
 }
-img {
-    float: right;
-    width: 130px;
-    height: 80px;
-    margin: 1px 3px 2px 0;
-}
-.account{
+
+/*img {*/
+/*    float: right;*/
+/*    width: 130px;*/
+/*    height: 80px;*/
+/*    margin: 1px 3px 2px 0;*/
+/*}*/
+
+.account {
     margin: 14px 0 0 520px;
 }
-.main{
+
+.main {
     float: left;
 }
