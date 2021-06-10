@@ -29,15 +29,15 @@ if (!isset($_SESSION['loggedin'])) {
 <h1>Make your own card</h1>
 <div class="divTable blueTable">
     <div class="divTableBody">
-        <div class="divTableRow">
-            <div class="divTableCell">
-                <h2>Greeting card model</h2>
-                <label for="model"></label><select onchange="setModel(this);" name="model" id="model">
-                    <option></option>
-                    <option value="1">Model 1</option>
-                    <option value="2">Model 2</option>
-                </select></div>
-        </div>
+<!--        <div class="divTableRow">-->
+<!--            <div class="divTableCell">-->
+<!--                <h2>Greeting card model</h2>-->
+<!--                <label for="model"></label><select onchange="setModel(this);" name="model" id="model">-->
+<!--                    <option></option>-->
+<!--                    <option value="1">Model 1</option>-->
+<!--                    <option value="2">Model 2</option>-->
+<!--                </select></div>-->
+<!--        </div>-->
         <div class="divTableRow">
             <div class="divTableCell">
                 <h2>Greeting text</h2>
@@ -72,13 +72,13 @@ if (!isset($_SESSION['loggedin'])) {
                 <h2>Font Size</h2>
                 <label for="font_size"></label><select onchange="getFontSize(this);" name="font_size" id="font_size">
                     <option></option>
-                    <option value="18px ">xx-small</option>
-                    <option value="24px ">x-small</option>
-                    <option value="30px ">small</option>
-                    <option value="36px ">medium</option>
-                    <option value="48px ">large</option>
-                    <option value="60px ">x-large</option>
-                    <option value="72px ">xx-large</option>
+                    <option value="18">xx-small</option>
+                    <option value="24">x-small</option>
+                    <option value="30">small</option>
+                    <option value="36">medium</option>
+                    <option value="48">large</option>
+                    <option value="60">x-large</option>
+                    <option value="72">xx-large</option>
                 </select>
             </div>
         </div>

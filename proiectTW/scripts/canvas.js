@@ -17,13 +17,12 @@ async function getFontSize(selectTag) {
 
 
 async function preview() {
-    if (model === "1" || model === "3") {
-        document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="500" height="600"
-            style="border:1px solid #d3d3d3;">`;
-    } else {
+    // if (model === "1" || model === "3") {
+    //     document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="500" height="600"
+    //         style="border:1px solid #d3d3d3;">`;
+    // } else {
         document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="800" height="500"
             style="border:1px solid #d3d3d3;">`;
-    }
 
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
@@ -32,37 +31,44 @@ async function preview() {
     font_colour = document.getElementById("font_color").value;
     back_colour = document.getElementById("back_color").value;
     checked = document.getElementById("checkbox");
-    if (model === "3") {
-        image_x = 140;
-        image_y = canvas.height / 2;
-        image_width = 200;
-        image_height = 200;
-        text_x = 50;
-        text_y = 150;
-    } else if (model === "4") {
-        image_x = 300;
-        image_y = canvas.height / 2;
-        image_width = 200;
-        image_height = 200;
-        text_x = 160;
-        text_y = 150;
-    }
+    // if (model === "3") {
+    //     image_x = 140;
+    //     image_y = canvas.height / 2;
+    //     image_width = 200;
+    //     image_height = 200;
+    //     text_x = 50;
+    //     text_y = 150;
+    // } else if (model === "4") {
+    //     image_x = 300;
+    //     image_y = canvas.height / 2;
+    //     image_width = 200;
+    //     image_height = 200;
+    //     text_x = 160;
+    //     text_y = 150;
+    // }
+    //
+    // if (model === "1") {
+    //     image_x = 140;
+    //     image_y = 50;
+    //     image_width = 200;
+    //     image_height = 200;
+    //     text_x = 50;
+    //     text_y = canvas.height / 2 + 100;
+    // } else if (model === "2") {
+    //     image_x = 300;
+    //     image_y = canvas.height / 2;
+    //     image_width = 200;
+    //     image_height = 200;
+    //     text_x = 160;
+    //     text_y = 150;
+    // }
 
-    if (model === "1") {
-        image_x = 140;
-        image_y = 50;
-        image_width = 200;
-        image_height = 200;
-        text_x = 50;
-        text_y = canvas.height / 2 + 100;
-    } else if (model === "2") {
-        image_x = 300;
-        image_y = canvas.height / 2;
-        image_width = 200;
-        image_height = 200;
-        text_x = 160;
-        text_y = 150;
-    }
+        image_x = 600;
+        image_y = 500;
+        image_width = 500;
+        image_height = 500;
+        text_x = 700;
+        text_y = 100;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = back_colour;
@@ -74,7 +80,7 @@ async function preview() {
     var width = window.innerWidth;
     var height = window.innerHeight;
 
-    var stage = new Konva.Stage({
+    var stage = new Konva.Stage({  //https://konvajs.org/docs/sandbox/GIF_On_Canvas.html
         container: 'canvas-content',
         width: width,
         height: height,
@@ -87,10 +93,10 @@ async function preview() {
 
     stage.container().style.backgroundColor = back_colour;
     var text = new Konva.Text({
-        x: 10,
-        y: 15,
+        x: text_x,
+        y: text_y,
         text: greeting_text,
-        fontSize: 30,
+        fontSize: font_size,
         fontFamily: font_text,
         fill: font_colour
     });
@@ -113,8 +119,8 @@ async function preview() {
 
         // darth vader
         let img = new Konva.Image({
-            width: 200,
-            height: 200
+            width: image_width,
+            height: image_height
         });
         imgGroup.add(img);
 
