@@ -15,6 +15,7 @@ async function getFontSize(selectTag) {
     font_size = selectTag.options[selectTag.selectedIndex].value;
 }
 
+
 async function preview() {
     if (model === "1" || model === "3") {
         document.getElementById("canvas-content").innerHTML = `<canvas id="myCanvas" width="500" height="600"
@@ -70,23 +71,79 @@ async function preview() {
     ctx.fillStyle = font_colour;
     ctx.fillText(greeting_text, text_x, text_y);
 
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    var stage = new Konva.Stage({
+        container: 'canvas-content',
+        width: width,
+        height: height,
+    });
+
+
+    var layer = new Konva.Layer();
+    stage.add(layer);
+    // use external library to parse and draw gif animation
+
+    stage.container().style.backgroundColor = back_colour;
+    var text = new Konva.Text({
+        x: 10,
+        y: 15,
+        text: greeting_text,
+        fontSize: 30,
+        fontFamily: font_text,
+        fill: font_colour
+    });
+    layer.add(text);
+    layer.draw();
+
+
     const preview = document.getElementById('canvas-content');
     const file = document.querySelector('input[type=file]').files[0];
     const reader = new FileReader();
     reader.addEventListener("load", function () {
-        // convert image file to base64 string
-        const image = new Image();
-        image.src = reader.result;
-        var sth = new Image();
-        sth.onload = function () {
-            ctx.drawImage(sth, image_x, image_y, image_width, image_height);
+
+
+        var imgGroup = new Konva.Group({
+            x: 500,
+            y: 200,
+            draggable: false
+        });
+        layer.add(imgGroup);
+
+        // darth vader
+        let img = new Konva.Image({
+            width: 200,
+            height: 200
+        });
+        imgGroup.add(img);
+
+        var imageObj1 = new Image();
+        imageObj1.onload = function () {
+            img.image(imageObj1);
+            layer.draw();
         };
-        sth.src = reader.result;
-        preview.src = reader.result;
+        imageObj1.src = reader.result;
+        console.log(reader.result);
     }, false);
     if (file) {
         reader.readAsDataURL(file);
     }
+
+    function onDrawFrame(ctx, frame) {
+        // update canvas size
+        ctx.drawImage(frame.buffer, 0, 0);
+        // redraw the layer
+        layer.fillStyle = back_colour;
+        layer.draw();
+    }
+
+    gifler('../assets/duck.gif').frames(canvas, onDrawFrame);
+    // draw resulted canvas into the stage as Konva.Image
+    var image = new Konva.Image({
+        image: canvas,
+    });
+    layer.add(image);
 }
 
 document.addEventListener('DOMContentLoaded', function (e) { //https://stackoverflow.com/questions/48048797/base64canvas-to-blob-blob-to-php
@@ -114,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function (e) { //https://stackover
 
         let callback = function (r) {
             let newLink = (' ' + r.toString()).slice(1);
-            newLink = newLink.replace("C:/xampp/htdocs/TW2021/proiectTW" , 'http://192.168.43.5/TW2021/proiectTW');
+            newLink = newLink.replace("C:/xampp/htdocs/TW2021/proiectTW", 'http://192.168.1.7/TW2021/proiectTW');
             console.log(newLink);
             linkQR = newLink;
         }
@@ -144,12 +201,12 @@ async function downloadImage(data, filename = 'untitled.jpeg') {
 
 async function sendLink() {
     canvas = document.getElementById("myCanvas");
-    let dataURL = canvas.toDataURL("image/jpg", 1.0);
+    //  let dataURL = canvas.toDataURL("image/jpg", 1.0);
     qrcode = new QRCode(document.getElementById("qrcode"), {
         width: 500,
         height: 500
 
     });
-  //document.getElementById("imageLink").innerHTML = linkQR;
+    //document.getElementById("imageLink").innerHTML = linkQR;
     qrcode.makeCode(linkQR);
 }

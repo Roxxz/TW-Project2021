@@ -19,6 +19,8 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <script src="../scripts/canvas.js" type="text/javascript" defer></script>
     <script src="../scripts/qrcode.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/konva@8.0.4/konva.min.js"></script>
+    <script src="https://unpkg.com/gifler@0.1.0/gifler.min.js"></script>
 
 </head>
 
@@ -105,6 +107,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <br>
             </div>
         </div>
+
         <div class="divTableRow">
             <div class="divTableCell">
                 <button id='bttn' type="submit" value="Save">Save</button>
@@ -129,12 +132,12 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
-                <div id="imageLink"> </div>
+                <div id="imageLink"></div>
             </div>
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
-               <div id="qrcode" style=" width: 400px; height: 400px; position: absolute; margin: 0 0 0 500px; "></div>
+                <div id="qrcode" style=" width: 400px; height: 400px; position: absolute; margin: 0 0 0 500px; "></div>
                 <br><br>
             </div>
         </div>
