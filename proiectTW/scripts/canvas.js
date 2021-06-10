@@ -1,8 +1,7 @@
 let greeting_text, font_colour, back_colour, font_text, font_size, canvas, ctx, model, checked;
 let text_x, text_y;
 let image_x, image_y, image_width, image_height;
-let qrcode;
-let newLink;
+let qrcode, linkQR;
 
 async function setModel(selectTag) {
     model = selectTag.options[selectTag.selectedIndex].value;
@@ -114,7 +113,10 @@ document.addEventListener('DOMContentLoaded', function (e) { //https://stackover
         };
 
         let callback = function (r) {
-            newLink = (' ' + r.toString()).slice(1);
+            let newLink = (' ' + r.toString()).slice(1);
+            newLink = newLink.replace("C:/xampp/htdocs/TW2021/proiectTW" , 'http://192.168.43.5/TW2021/proiectTW');
+            console.log(newLink);
+            linkQR = newLink;
         }
 
         ajax.call(this, '../php/insertDatabase.php', fd, callback);
@@ -148,6 +150,6 @@ async function sendLink() {
         height: 500
 
     });
-    document.getElementById("imageLink").innerHTML = newLink;
-    qrcode.makeCode(newLink);
+  //document.getElementById("imageLink").innerHTML = linkQR;
+    qrcode.makeCode(linkQR);
 }
