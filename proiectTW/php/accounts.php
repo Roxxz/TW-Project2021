@@ -21,7 +21,7 @@
 </p>
 <p>
     You can also fill in the form you'll find
-<form style="display: inline" action="contact_form.html" method="get">
+<form style="display: inline" action="../contact/form.php" method="get">
     <button class="dropbtn">here</button>
     to let us know what you think about us!
 </form>

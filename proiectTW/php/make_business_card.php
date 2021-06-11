@@ -121,7 +121,7 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <div class="divTableRow">
             <div class="divTableCell">
-                <div id="qrcode" style="width:100px; height: 100px; "></div>
+                <div id="qrcode" style="width: 400px; height: 400px; position: absolute; margin: 0 0 0 500px; "></div>
             </div>
         </div>
     </div>

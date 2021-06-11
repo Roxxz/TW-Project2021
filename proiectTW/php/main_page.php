@@ -20,7 +20,7 @@
 
 <img class="welcome" src="../assets/welcome.png" alt="welcome">
 
-<img class="new1" src="../assets/newButton.png" alt="new1">
+<!--<img class="new1" src="../assets/newButton.png" alt="new1">-->
 
 <p class="first">
     Do you want your company to be more popular? </p>
@@ -34,7 +34,7 @@
 </p>
 <a href="business_card.php"><img class="businessButton" src="../assets/businessButton.png" alt="businessButtoon"></a>
 
-<img class="new2" src="../assets/newButton.png" alt="new2">
+<!--<img class="new2" src="../assets/newButton.png" alt="new2">-->
 
 <p class="second">
     Are you organizing a Halloween party and want to invite everyone you know?<br> There's an easy way to do that, by
