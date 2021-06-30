@@ -15,8 +15,9 @@ Membrii echipei sunt:
 
 -------------------------------------------------------
 
-~ConGratZ~
+.ConGratZ.
 
 Simple Web App where you are going to find a variety of business and birthday cards for every occasion.
 You can download any card you like or make one of your own. Furthermore, you can contact the website team for complaints or any demand, or you can give us a feedback which will appear on the page among the others.
+
 Project made for the Web Technologies course at the Al.I.Cuza University, Computer Science faculty, 2nd year.
